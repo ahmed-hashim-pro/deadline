@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="471" viewBox="0 0 1000 471" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="24" y="30" font-size="17" font-weight="600" fill="#24292f">One slow request, user → gateway → orders → inventory</text>
+<text x="24" y="50" font-size="12.5" fill="#57606a">Same services, same timeouts and retries. Inventory takes 1.5 s; orders waits 1.0 s for it, three times; gateway waits 3.5 s for orders, three times.</text>
+<line x1="96.0" y1="102.0" x2="96.0" y2="197.0" stroke="#d8dee4"/>
+<text x="96.0" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">0 s</text>
+<line x1="183.4" y1="102.0" x2="183.4" y2="197.0" stroke="#d8dee4"/>
+<text x="183.4" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">1 s</text>
+<line x1="270.8" y1="102.0" x2="270.8" y2="197.0" stroke="#d8dee4"/>
+<text x="270.8" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">2 s</text>
+<line x1="358.2" y1="102.0" x2="358.2" y2="197.0" stroke="#d8dee4"/>
+<text x="358.2" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">3 s</text>
+<line x1="445.6" y1="102.0" x2="445.6" y2="197.0" stroke="#d8dee4"/>
+<text x="445.6" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">4 s</text>
+<line x1="533.0" y1="102.0" x2="533.0" y2="197.0" stroke="#d8dee4"/>
+<text x="533.0" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">5 s</text>
+<line x1="620.4" y1="102.0" x2="620.4" y2="197.0" stroke="#d8dee4"/>
+<text x="620.4" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">6 s</text>
+<line x1="707.8" y1="102.0" x2="707.8" y2="197.0" stroke="#d8dee4"/>
+<text x="707.8" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">7 s</text>
+<line x1="795.2" y1="102.0" x2="795.2" y2="197.0" stroke="#d8dee4"/>
+<text x="795.2" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">8 s</text>
+<line x1="882.6" y1="102.0" x2="882.6" y2="197.0" stroke="#d8dee4"/>
+<text x="882.6" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">9 s</text>
+<line x1="970.0" y1="102.0" x2="970.0" y2="197.0" stroke="#d8dee4"/>
+<text x="970.0" y="211.0" font-size="11" text-anchor="middle" fill="#57606a">10 s</text>
+<rect x="270.8" y="102.0" width="699.2" height="95.0" fill="#f6f8fa"/>
+<text x="24" y="78.0" font-size="13.5" font-weight="600" fill="#24292f">Without deadlines: every hop's timeouts and retries are its own</text>
+<text x="86.0" y="119.0" font-size="12.5" font-weight="600" text-anchor="end" fill="#24292f">gateway</text>
+<rect x="96.1" y="108.0" width="174.71" height="14.0" fill="#2a78d6"/>
+<rect x="270.8" y="108.0" width="624.74" height="14.0" fill="#cf222e"/>
+<text x="86.0" y="145.0" font-size="12.5" font-weight="600" text-anchor="end" fill="#24292f">orders</text>
+<rect x="96.2" y="134.0" width="174.63" height="14.0" fill="#2a78d6"/>
+<rect x="270.8" y="134.0" width="91.33" height="14.0" fill="#cf222e"/>
+<rect x="362.6" y="134.0" width="264.56" height="14.0" fill="#cf222e"/>
+<rect x="627.3" y="134.0" width="264.47" height="14.0" fill="#cf222e"/>
+<text x="86.0" y="180.5" font-size="12.5" font-weight="600" text-anchor="end" fill="#24292f">inventory</text>
+<rect x="98.1" y="160.0" width="131.19" height="14.0" fill="#2a78d6"/>
+<rect x="185.7" y="179.0" width="85.13" height="14.0" fill="#2a78d6"/>
+<rect x="270.8" y="179.0" width="46.06" height="14.0" fill="#cf222e"/>
+<rect x="273.2" y="160.0" width="131.19" height="14.0" fill="#cf222e"/>
+<rect x="364.7" y="179.0" width="131.27" height="14.0" fill="#cf222e"/>
+<rect x="452.4" y="160.0" width="131.27" height="14.0" fill="#cf222e"/>
+<rect x="539.9" y="179.0" width="131.19" height="14.0" fill="#cf222e"/>
+<rect x="629.4" y="160.0" width="131.19" height="14.0" fill="#cf222e"/>
+<rect x="716.9" y="179.0" width="131.19" height="14.0" fill="#cf222e"/>
+<rect x="804.1" y="160.0" width="131.36" height="14.0" fill="#cf222e"/>
+<line x1="270.8" y1="92.0" x2="270.8" y2="197.0" stroke="#24292f" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="275.8" y="99.0" font-size="11.5" fill="#24292f">user gave up at 2.00 s</text>
+<text x="970.0" y="227.0" font-size="11.5" text-anchor="end" fill="#cf222e">services busy until 9.61 s · 11.1 s of worker time after the user stopped waiting</text>
+<line x1="96.0" y1="283.0" x2="96.0" y2="359.0" stroke="#d8dee4"/>
+<text x="96.0" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">0 s</text>
+<line x1="183.4" y1="283.0" x2="183.4" y2="359.0" stroke="#d8dee4"/>
+<text x="183.4" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">1 s</text>
+<line x1="270.8" y1="283.0" x2="270.8" y2="359.0" stroke="#d8dee4"/>
+<text x="270.8" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">2 s</text>
+<line x1="358.2" y1="283.0" x2="358.2" y2="359.0" stroke="#d8dee4"/>
+<text x="358.2" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">3 s</text>
+<line x1="445.6" y1="283.0" x2="445.6" y2="359.0" stroke="#d8dee4"/>
+<text x="445.6" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">4 s</text>
+<line x1="533.0" y1="283.0" x2="533.0" y2="359.0" stroke="#d8dee4"/>
+<text x="533.0" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">5 s</text>
+<line x1="620.4" y1="283.0" x2="620.4" y2="359.0" stroke="#d8dee4"/>
+<text x="620.4" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">6 s</text>
+<line x1="707.8" y1="283.0" x2="707.8" y2="359.0" stroke="#d8dee4"/>
+<text x="707.8" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">7 s</text>
+<line x1="795.2" y1="283.0" x2="795.2" y2="359.0" stroke="#d8dee4"/>
+<text x="795.2" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">8 s</text>
+<line x1="882.6" y1="283.0" x2="882.6" y2="359.0" stroke="#d8dee4"/>
+<text x="882.6" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">9 s</text>
+<line x1="970.0" y1="283.0" x2="970.0" y2="359.0" stroke="#d8dee4"/>
+<text x="970.0" y="373.0" font-size="11" text-anchor="middle" fill="#57606a">10 s</text>
+<rect x="258.7" y="283.0" width="711.3" height="76.0" fill="#f6f8fa"/>
+<text x="24" y="259.0" font-size="13.5" font-weight="600" fill="#24292f">With deadlines: each hop is told what's left of the user's 2 s</text>
+<text x="86.0" y="300.0" font-size="12.5" font-weight="600" text-anchor="end" fill="#24292f">gateway</text>
+<rect x="96.4" y="289.0" width="162.13" height="14.0" fill="#2a78d6"/>
+<text x="86.0" y="326.0" font-size="12.5" font-weight="600" text-anchor="end" fill="#24292f">orders</text>
+<rect x="96.9" y="315.0" width="160.90" height="14.0" fill="#2a78d6"/>
+<text x="86.0" y="352.0" font-size="12.5" font-weight="600" text-anchor="end" fill="#24292f">inventory</text>
+<rect x="99.0" y="341.0" width="82.33" height="14.0" fill="#2a78d6"/>
+<rect x="181.4" y="341.0" width="74.64" height="14.0" fill="#2a78d6"/>
+<line x1="258.7" y1="273.0" x2="258.7" y2="359.0" stroke="#24292f" stroke-width="1.5" stroke-dasharray="5 3"/>
+<text x="263.7" y="280.0" font-size="11.5" fill="#24292f">user got 504 at 1.86 s</text>
+<text x="970.0" y="389.0" font-size="11.5" text-anchor="end" fill="#57606a">services busy until 1.86 s · 0.0 s of worker time after the user stopped waiting</text>
+<rect x="96.0" y="411.0" width="22" height="12" fill="#2a78d6"/>
+<text x="126.0" y="421.0" font-size="12" fill="#57606a">working while the user is waiting</text>
+<rect x="356.0" y="411.0" width="22" height="12" fill="#cf222e"/>
+<text x="386.0" y="421.0" font-size="12" fill="#57606a">working after the user stopped waiting</text>
+<text x="96.0" y="443.0" font-size="12" fill="#57606a">One bar each time a service handled the request, drawn from the services' own logs.</text>
+</svg>
